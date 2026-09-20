@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <Platforms>AnyCPU</Platforms>
+        <NoWarn>$(NoWarn);1591</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Description>A thread-safe utility for obtaining Railway's GraphQlClient singleton.</Description>
+        <Version Condition="'$(BUILD_VERSION)' == ''">4.0.0</Version>
+        <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
+        <AssemblyName>Soenneker.Railway.GraphQlClientUtil</AssemblyName>
+        <PackageId>Soenneker.Railway.GraphQlClientUtil</PackageId>
+        <PackageTags>railway graphqlclientutil graphql cloud deployment client util singleton railwaygraphqlclientutil csharp dotnet c# .net</PackageTags>
+        <Copyright>Copyright © 2026 Jake Soenneker</Copyright>
+        <Authors>Jake Soenneker</Authors>
+        <Company>https://soenneker.com</Company>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <IsPackable>true</IsPackable>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/soenneker/soenneker.railway.graphqlclientutil</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/soenneker/soenneker.railway.graphqlclientutil</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryBranch>main</RepositoryBranch>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <LangVersion>latest</LangVersion>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>icon.png</PackageIcon>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+        <None Include="..\..\icon.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../../../soenneker.railway.httpclients/src/Soenneker.Railway.HttpClients/Soenneker.Railway.HttpClients.csproj" Condition="Exists('../../../soenneker.railway.httpclients/src/Soenneker.Railway.HttpClients/Soenneker.Railway.HttpClients.csproj')" />
+        <ProjectReference Include="../../../soenneker.railway.graphqlclient/src/Soenneker.Railway.GraphQlClient/Soenneker.Railway.GraphQlClient.csproj" Condition="Exists('../../../soenneker.railway.graphqlclient/src/Soenneker.Railway.GraphQlClient/Soenneker.Railway.GraphQlClient.csproj')" />
+        <PackageReference Include="Soenneker.Railway.HttpClients" Version="4.0.0" Condition="!Exists('../../../soenneker.railway.httpclients/src/Soenneker.Railway.HttpClients/Soenneker.Railway.HttpClients.csproj')" />
+        <PackageReference Include="Soenneker.Railway.GraphQlClient" Version="4.0.0" Condition="!Exists('../../../soenneker.railway.graphqlclient/src/Soenneker.Railway.GraphQlClient/Soenneker.Railway.GraphQlClient.csproj')" />
+        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="4.0.849" />
+    </ItemGroup>
+</Project>
+
