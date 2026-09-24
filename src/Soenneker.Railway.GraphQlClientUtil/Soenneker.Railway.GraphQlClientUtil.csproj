@@ -47,7 +47,6 @@
         <ProjectReference Include="../../../soenneker.railway.graphqlclient/src/Soenneker.Railway.GraphQlClient/Soenneker.Railway.GraphQlClient.csproj" Condition="Exists('../../../soenneker.railway.graphqlclient/src/Soenneker.Railway.GraphQlClient/Soenneker.Railway.GraphQlClient.csproj')" />
         <PackageReference Include="Soenneker.Railway.HttpClients" Version="4.0.0" Condition="!Exists('../../../soenneker.railway.httpclients/src/Soenneker.Railway.HttpClients/Soenneker.Railway.HttpClients.csproj')" />
         <PackageReference Include="Soenneker.Railway.GraphQlClient" Version="4.0.0" Condition="!Exists('../../../soenneker.railway.graphqlclient/src/Soenneker.Railway.GraphQlClient/Soenneker.Railway.GraphQlClient.csproj')" />
-        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="4.0.849" />
     </ItemGroup>
 </Project>
 
