@@ -12,7 +12,7 @@ namespace Soenneker.Railway.GraphQlClientUtil.Tests;
 public sealed class RailwayGraphQlClientUtilTests
 {
     [Test]
-    public async Task ResolvesRailwayDependenciesAndReusesClient()
+    public async ValueTask ResolvesRailwayDependenciesAndReusesClient()
     {
         IConfiguration config = new ConfigurationBuilder().AddInMemoryCollection(new Dictionary<string, string?> { ["Railway:ApiKey"] = "test-token" }).Build();
         await using var provider = new ServiceCollection().AddLogging().AddSingleton(config)
