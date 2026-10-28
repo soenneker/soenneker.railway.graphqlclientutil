@@ -48,7 +48,7 @@
     <ItemGroup>
         <ProjectReference Include="../../../soenneker.railway.httpclients/src/Soenneker.Railway.HttpClients/Soenneker.Railway.HttpClients.csproj" Condition="Exists('../../../soenneker.railway.httpclients/src/Soenneker.Railway.HttpClients/Soenneker.Railway.HttpClients.csproj')" />
         <ProjectReference Include="../../../soenneker.railway.graphqlclient/src/Soenneker.Railway.GraphQlClient/Soenneker.Railway.GraphQlClient.csproj" Condition="Exists('../../../soenneker.railway.graphqlclient/src/Soenneker.Railway.GraphQlClient/Soenneker.Railway.GraphQlClient.csproj')" />
-        <PackageReference Include="Soenneker.Railway.HttpClients" Version="11.0.28" Condition="!Exists('../../../soenneker.railway.httpclients/src/Soenneker.Railway.HttpClients/Soenneker.Railway.HttpClients.csproj')" />
+        <PackageReference Include="Soenneker.Railway.HttpClients" Version="11.0.30" Condition="!Exists('../../../soenneker.railway.httpclients/src/Soenneker.Railway.HttpClients/Soenneker.Railway.HttpClients.csproj')" />
         <PackageReference Include="Soenneker.Railway.GraphQlClient" Version="11.0.37" Condition="!Exists('../../../soenneker.railway.graphqlclient/src/Soenneker.Railway.GraphQlClient/Soenneker.Railway.GraphQlClient.csproj')" />
     </ItemGroup>
 </Project>
