@@ -46,8 +46,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Railway.HttpClients" Version="11.0.45" />
-        <PackageReference Include="Soenneker.Railway.GraphQlClient" Version="11.0.53" />
+        <PackageReference Include="Soenneker.Railway.HttpClients" Version="11.0.47" />
+        <PackageReference Include="Soenneker.Railway.GraphQlClient" Version="11.0.55" />
     </ItemGroup>
 </Project>
 
